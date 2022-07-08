@@ -130,7 +130,12 @@ p {
 .hero {
   background-color: var(--bgr-clr);
 }
+.hero-container {
+  text-align: center;
+}
 .hero-title {
+  text-align: center;
+  margin-bottom: 30px;
   color: var(--btn-clr);
   font-weight: 900;
   font-size: 44px;
@@ -148,7 +153,18 @@ p {
   border-color: var(--logo-clr);
 }
 /* Dignity */
+
+.dignity-list {
+  display: flex;
+  gap: 30px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.dignity-item {
+  width: 270px;
+}
 .dignity-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -158,7 +174,14 @@ p {
 }
 
 /* Operations */
+.operations-list,
+.team-list {
+  display: flex;
+  gap: 30px;
+}
 .section-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: calc(42 / 36);
   letter-spacing: 0.03em;
@@ -167,6 +190,11 @@ p {
 /* Team */
 .team {
   background-color: var(--secondary-bgr-clr);
+}
+.team-card {
+  display: inline-block;
+  width: 270px;
+  border-radius: 0px 0px 4px 4px;
 }
 .team-card,
 .team-title {
