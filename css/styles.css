@@ -18,6 +18,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-txt-clr);
 }
+
+
+
 .btn {
   font-family: inherit;
   cursor: pointer;
@@ -58,7 +61,8 @@ body {
   color: var(--logo-clr);
 }
 
-/* Heder */
+/* Header */
+
 
 .header {
   font-weight: 500;
