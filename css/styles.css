@@ -31,7 +31,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
 }
 
@@ -157,8 +158,6 @@ p {
 .dignity-list {
   display: flex;
   gap: 30px;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .dignity-item {
   width: 270px;
@@ -179,6 +178,10 @@ p {
   display: flex;
   gap: 30px;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .section-title {
   text-align: center;
   margin-bottom: 50px;
@@ -194,6 +197,8 @@ p {
 .team-card {
   display: inline-block;
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .team-card,
