@@ -201,6 +201,11 @@ ol {
 .operations .card-item {
   flex-basis: calc((100% - (3 - 1) * var(--card-gap)) / var(--card-item));
 }
+.operations-img {
+  display: block;
+  height: auto;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
