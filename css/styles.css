@@ -73,6 +73,18 @@ ol {
   margin-right: auto;
   margin-left: auto;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Main header */
 
@@ -92,6 +104,7 @@ ol {
   letter-spacing: 0.03em;
   color: var(--logo-clr);
 }
+
 .logo .logo-black {
   color: var(--main-txt-clr);
 }
@@ -159,6 +172,7 @@ ol {
   line-height: calc(60 / 44);
   text-transform: uppercase;
 }
+
 .hero-button {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -174,11 +188,13 @@ ol {
   letter-spacing: 0.06em;
   border-color: var(--logo-clr);
 }
+
 /* Dignity */
 
 .dignity-item {
   width: 270px;
 }
+
 .dignity-title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -197,6 +213,7 @@ ol {
       var(--card-item)
   );
 }
+
 .operations-img {
   display: block;
   height: auto;
@@ -206,6 +223,7 @@ ol {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .section-title {
   text-align: center;
   margin-bottom: 50px;
@@ -220,9 +238,11 @@ ol {
 .team-list {
   display: flex;
 }
+
 .team {
   background-color: var(--secondary-bgr-clr);
 }
+
 .team-card {
   display: inline-block;
   text-align: center;
@@ -233,6 +253,7 @@ ol {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-card,
 .team-title {
   background-color: var(--btn-clr);
@@ -240,20 +261,24 @@ ol {
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
 }
+
 .team-title {
   color: var(--main-txt-clr);
   font-weight: 500;
   margin-bottom: 10px;
 }
+
 .team-text {
   font-size: 16px;
   line-height: calc(19 / 16);
 }
+
 .team-img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 .card-item {
   flex-basis: calc(
     (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
@@ -265,30 +290,38 @@ ol {
 .footer {
   background-color: var(--bgr-clr);
 }
+
 .address {
   color: var(--mail-tel-clr);
   font-style: normal;
 }
+
 .address-link {
   color: var(--btn-clr);
 }
+
 .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
 .footer .logo {
   padding: 0;
   margin-bottom: 20px;
 }
+
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .logo-white {
   color: var(--btn-clr);
 }
 
 /* Portfolio */
+
 /* Main */
+
 .filter-list {
   display: flex;
   flex-wrap: wrap;
@@ -311,6 +344,7 @@ ol {
   border-color: transparent;
   border-radius: 4px;
 }
+
 .filter-item {
   margin-left: 8px;
 }
