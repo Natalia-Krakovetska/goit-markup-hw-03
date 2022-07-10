@@ -10,6 +10,7 @@
   --mail-tel-clr: rgba(255, 255, 255, 0.6);
   --card-gap: 30px;
   --card-item: 4;
+  --secondary-card-item: 3;
 }
 
 /* Main */
@@ -40,11 +41,6 @@ ul,
 ol {
   padding: 0;
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
 .btn {
   font-family: inherit;
@@ -71,6 +67,18 @@ img {
 
 .link:active {
   color: var(--logo-clr);
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-gap);
+}
+.card-item {
+  /* flex-basis: calc((100% - (3 - 1) * 30px) / 3); */
+  flex-basis: calc(
+    (100% - (var(var(--secondary-card-item)) - 1) * var(--card-gap)) /
+      var(--card-item)
+  );
 }
 
 /* Main header */
@@ -175,7 +183,6 @@ img {
 }
 /* Dignity */
 
-
 .dignity-item {
   width: 270px;
 }
@@ -190,10 +197,9 @@ img {
 }
 
 /* Operations */
-.operations-list,
-.team-list {
-  display: flex;
-  gap: 30px;
+
+.operations .card-item {
+  flex-basis: calc((100% - (3 - 1) * var(--card-gap)) / var(--card-item));
 }
 .section {
   padding-top: 94px;
@@ -207,7 +213,12 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-txt-clr);
 }
+
 /* Team */
+
+.team-list {
+  display: flex;
+}
 .team {
   background-color: var(--secondary-bgr-clr);
 }
@@ -233,12 +244,18 @@ img {
   font-weight: 500;
   margin-bottom: 10px;
 }
-.team-text,
-.team-title {
+.team-text {
   font-size: 16px;
   line-height: calc(19 / 16);
 }
+.team-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Footer */
+
 .footer {
   background-color: var(--bgr-clr);
 }
@@ -257,7 +274,8 @@ img {
   margin-bottom: 20px;
 }
 .footer .container {
-  pa
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-white {
   color: var(--btn-clr);
@@ -292,22 +310,4 @@ img {
 .sevice-text {
   font-size: 16px;
   line-height: calc(30 / 16);
-}
-
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--card-gap);
-  /* margin-left: calc(-1 * var(--card-gap));
-    margin-top: calc(-1 * var(--card-gap)); */
-}
-.card-item {
-  /* flex-basis: calc((100% - (3 - 1) * 30px) / 3); */
-  flex-basis: calc(
-    (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
-  );
-  /* flex-basis: calc(100% / var(--card-item) - var(--card-gap)); */
-  /* margin-left: var(--card-gap);
-    margin-top: var(--card-gap); */
 }
