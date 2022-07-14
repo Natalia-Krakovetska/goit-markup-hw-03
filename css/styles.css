@@ -8,9 +8,10 @@
   --secondary-bgr-clr: #f5f4fa;
   --btn-clr: #ffffff;
   --mail-tel-clr: rgba(255, 255, 255, 0.6);
+  --brd-card-clr: #eeeeee;
+  --brd-hero-clr: #ececec;
   --card-gap: 30px;
   --card-item: 4;
-  --secondary-card-item: 3;
 }
 
 /* Main */
@@ -63,6 +64,12 @@ ol {
   gap: var(--card-gap);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -87,12 +94,12 @@ ol {
 
 /* Logo */
 
+.header .logo {
+  margin-right: 93px;
+}
+
 .logo {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
-  width: 145px;
   text-decoration: none;
   font-family: var(--secondary-txt-font);
   font-weight: 700;
@@ -116,7 +123,7 @@ ol {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--brd-hero-clr);
 }
 
 .header-list {
@@ -126,7 +133,10 @@ ol {
   gap: 50px;
 }
 
-.header-link {
+.header-link,
+.navigation-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -137,12 +147,6 @@ ol {
   gap: 50px;
 }
 
-.navigation-item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .navigation-list .current {
   color: var(--logo-clr);
 }
@@ -150,16 +154,14 @@ ol {
 /* Baner */
 
 .hero {
+  text-align: center;
   background-color: var(--bgr-clr);
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.hero-container {
-  text-align: center;
-}
+
 .hero-title {
   max-width: 696px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -168,6 +170,7 @@ ol {
   font-size: 44px;
   line-height: calc(60 / 44);
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .hero-button {
@@ -175,7 +178,7 @@ ol {
   padding-bottom: 10px;
   padding-right: 32px;
   padding-left: 32px;
-  min-width: 36px;
+  min-width: 200px;
   color: var(--btn-clr);
   background-color: var(--logo-clr);
   font-style: normal;
@@ -204,11 +207,8 @@ ol {
 
 /* Operations */
 
-.operations .card-item {
-  flex-basis: calc(
-    (100% - (var(--secondary-card-item) - 1) * var(--card-gap)) /
-      var(--card-item)
-  );
+.operations-list {
+  --card-item: 3;
 }
 
 .operations-img {
@@ -219,6 +219,9 @@ ol {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.section .operations {
+  padding-top: 0;
 }
 
 .section-title {
@@ -232,28 +235,23 @@ ol {
 
 /* Team */
 
-.team-list {
-  display: flex;
-}
-
 .team {
   background-color: var(--secondary-bgr-clr);
 }
 
-.team-card {
-  display: inline-block;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 270px;
+.team-item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-card,
+.team-card {
+  padding: 30px;
+  text-align: center;
+}
+
+.team-text,
 .team-title {
-  background-color: var(--btn-clr);
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
@@ -270,12 +268,6 @@ ol {
   line-height: calc(19 / 16);
 }
 
-.team-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .card-item {
   flex-basis: calc(
     (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
@@ -286,6 +278,8 @@ ol {
 
 .footer {
   background-color: var(--bgr-clr);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .address {
@@ -302,13 +296,7 @@ ol {
 }
 
 .footer .logo {
-  padding: 0;
   margin-bottom: 20px;
-}
-
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .logo-white {
@@ -324,6 +312,7 @@ ol {
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
+  gap: 8px;
 }
 
 .filter-btn {
@@ -332,45 +321,35 @@ ol {
   padding-left: 22px;
   padding-right: 22px;
   max-width: 100%;
+  border: none;
   color: var(--main-txt-clr);
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
   background-color: var(--secondary-bgr-clr);
-  border-color: transparent;
   border-radius: 4px;
 }
 
-.filter-item {
-  margin-left: 8px;
-}
-
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--btn-clr);
   background-color: var(--logo-clr);
 }
 
 /* Service */
 
-.service-img {
-  display: block;
-}
 .projects {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-  border: 1px solid #eeeeee;
-  border-top: transparent;
+  border: 1px solid var(--brd-card-clr);
+  border-top: nonet;
 }
 
 .service-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--card-gap);
-  max-width: 100%;
-  height: auto;
+  --card-item: 3;
 }
 
 .sevice-subtitle {
@@ -384,11 +363,4 @@ ol {
 .sevice-text {
   font-size: 16px;
   line-height: calc(30 / 16);
-}
-
-.service-item {
-  flex-basis: calc(
-    (100% - (var(--secondary-card-item) - 1) * var(--card-gap)) /
-      var(--card-item)
-  );
 }
