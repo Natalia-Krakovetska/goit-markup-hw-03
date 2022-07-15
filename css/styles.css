@@ -220,7 +220,7 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.section .operations {
+.operations {
   padding-top: 0;
 }
 
@@ -345,7 +345,7 @@ img {
   padding-left: 24px;
   padding-right: 24px;
   border: 1px solid var(--brd-card-clr);
-  border-top: nonet;
+  border-top: none;
 }
 
 .service-list {
